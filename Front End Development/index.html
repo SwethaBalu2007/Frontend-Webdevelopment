@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Tech Summit 2026 — Event Registration</title>
+    <meta name="description"
+        content="Register for the Annual Tech Summit 2026. Join workshops on AI, Web Development, and Cybersecurity.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Interactive Canvas Background -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Animated Gradient Orbs -->
+    <div class="gradient-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="nav-icon">⚡</span> TechSummit
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#participants">Participants</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">📅 March 15, 2026</div>
+            <h1 class="hero-title">
+                Annual Tech Summit
+                <span class="gradient-text">2026</span>
+            </h1>
+            <p class="hero-subtitle">
+                A comprehensive conference discussing the future of
+                <strong>AI</strong>, <strong>Web Development</strong>, and <strong>Cybersecurity</strong>.
+            </p>
+            <div class="hero-actions">
+                <a href="#register" class="btn btn-primary btn-lg">
+                    <span>Register Now</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#details" class="btn btn-outline btn-lg">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="500">0</span>+
+                    <span class="stat-label">Attendees</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="20">0</span>+
+                    <span class="stat-label">Speakers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Tracks</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Event Details Section -->
+    <section class="section" id="details">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📋 Information</span>
+                <h2 class="section-title">Event Details</h2>
+                <p class="section-subtitle">Everything you need to know about the summit</p>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card" style="--delay: 0.1s">
+                    <div class="detail-icon">📅</div>
+                    <h3>Date</h3>
+                    <p>March 15, 2026</p>
+                </div>
+                <div class="detail-card" style="--delay: 0.2s">
+                    <div class="detail-icon">🕐</div>
+                    <h3>Time</h3>
+                    <p>9:00 AM – 5:00 PM</p>
+                </div>
+                <div class="detail-card" style="--delay: 0.3s">
+                    <div class="detail-icon">📍</div>
+                    <h3>Venue</h3>
+                    <p>City Convention Center, Main Hall</p>
+                </div>
+                <div class="detail-card" style="--delay: 0.4s">
+                    <div class="detail-icon">🏢</div>
+                    <h3>Organizer</h3>
+                    <p>Tech Innovators Club</p>
+                </div>
+            </div>
+
+            <!-- Event Details Table -->
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Detail</th>
+                            <th>Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="table-badge">📅</span> Event Date</td>
+                            <td>March 15, 2026</td>
+                        </tr>
+                        <tr>
+                            <td><span class="table-badge">🕐</span> Time</td>
+                            <td>9:00 AM – 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td><span class="table-badge">📍</span> Venue</td>
+                            <td>City Convention Center, Main Hall</td>
+                        </tr>
+                        <tr>
+                            <td><span class="table-badge">🏢</span> Organizer</td>
+                            <td>Tech Innovators Club</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="section section-alt" id="register">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">📝 Sign Up</span>
+                <h2 class="section-title">Registration Form</h2>
+                <p class="section-subtitle">Fill in the details below to secure your spot</p>
+            </div>
+
+            <div class="form-container">
+                <form id="registrationForm" action="#" method="post" novalidate>
+
+                    <!-- Personal Information -->
+                    <fieldset class="form-fieldset">
+                        <legend>
+                            <span class="legend-icon">👤</span> Personal Information
+                        </legend>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                <span class="error-msg" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                                <span class="error-msg" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210">
+                                <span class="error-msg" id="phoneError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" id="dob" name="dob">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gender <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" id="male" name="gender" value="male">
+                                    Male
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    Female
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" id="other" name="gender" value="other">
+                                    Other
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Event Selection -->
+                    <fieldset class="form-fieldset">
+                        <legend>
+                            <span class="legend-icon">🎯</span> Event Selection
+                        </legend>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="event">Select Event <span class="required">*</span></label>
+                                <div class="select-wrapper">
+                                    <select id="event" name="event" required>
+                                        <option value="" disabled selected>Choose an event...</option>
+                                        <option value="web_dev">🌐 Web Development Workshop</option>
+                                        <option value="ai_seminar">🤖 Artificial Intelligence Seminar</option>
+                                        <option value="cyber_sec">🔒 Cybersecurity Panel</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mode of Participation <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" id="online" name="mode" value="Online">
+                                    🖥️ Online
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" id="offline" name="mode" value="Offline">
+                                    🏛️ Offline (In-Person)
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Additional Details -->
+                    <fieldset class="form-fieldset">
+                        <legend>
+                            <span class="legend-icon">📎</span> Additional Details
+                        </legend>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="college">College / Company Name</label>
+                                <input type="text" id="college" name="college" placeholder="Enter your institution">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id_proof">Upload ID Proof</label>
+                                <div class="file-upload" id="fileUploadArea">
+                                    <input type="file" id="id_proof" name="id_proof" accept=".pdf,.jpg,.jpeg,.png">
+                                    <div class="file-upload-content">
+                                        <span class="file-upload-icon">📁</span>
+                                        <span class="file-upload-text">Click to upload or drag & drop</span>
+                                        <span class="file-upload-hint">PDF, JPG, PNG (max 5MB)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments">Comments / Expectations</label>
+                            <textarea id="comments" name="comments" rows="4"
+                                placeholder="Tell us what you're looking forward to..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <!-- Declaration -->
+                    <div class="declaration-box">
+                        <label class="checkbox-label declaration-label">
+                            <input type="checkbox" id="declaration" name="declaration" required>
+                            I confirm that the above details are correct. <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <!-- Form Controls -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                            <span>Submit Registration</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                            </svg>
+                        </button>
+                        <button type="reset" class="btn btn-outline btn-lg" id="resetBtn">
+                            <span>Reset Form</span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registered Participants Section -->
+    <section class="section" id="participants">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">👥 Attendees</span>
+                <h2 class="section-title">Registered Participants</h2>
+                <p class="section-subtitle">See who's already signed up</p>
+            </div>
+
+            <div class="participants-count">
+                <span id="participantCount">1</span> participant(s) registered
+            </div>
+
+            <div class="table-wrapper">
+                <table class="data-table participants-table" id="participantsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Event</th>
+                            <th>Mode</th>
+                        </tr>
+                    </thead>
+                    <tbody id="participantsBody">
+                        <tr>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td>123-456-7890</td>
+                            <td>Web Development Workshop</td>
+                            <td>Online</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><span class="nav-icon">⚡</span> TechSummit 2026</h3>
+                    <p>Empowering the next generation of tech innovators through workshops, seminars, and networking.
+                    </p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📧 <a href="mailto:contact@techinnovators.com">contact@techinnovators.com</a></li>
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>🕐 Support: 9:00 AM – 4:30 PM (Working Days)</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#details">Event Details</a></li>
+                        <li><a href="#register">Registration</a></li>
+                        <li><a href="#participants">Participants</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tech Innovators Club. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Toast -->
+    <div class="toast" id="successToast">
+        <div class="toast-icon">✅</div>
+        <div class="toast-content">
+            <strong>Registration Successful!</strong>
+            <p>Your details have been added to the participants list.</p>
+        </div>
+        <button class="toast-close" id="toastClose">&times;</button>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
